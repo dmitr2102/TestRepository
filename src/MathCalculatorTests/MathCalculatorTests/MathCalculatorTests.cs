@@ -26,6 +26,7 @@ namespace MathCalculatorTests
             Assert.Equal(Five / Three, r4);
         }
 
+        [Fact]
         public void WhenSubThreeFromFiveThenGotTwo()
         {
             MathCalculator calculator = new MathCalculator();
