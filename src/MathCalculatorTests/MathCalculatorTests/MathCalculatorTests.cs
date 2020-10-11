@@ -46,5 +46,21 @@ namespace MathCalculatorTests
 
             Assert.Equal(Four - Five, result);
         }
+
+        [Fact]
+        public void StringSumTestOne(){
+            MathCalculator calculator = new MathCalculator();
+
+            var result = calculator.Sum("abc", "cdb");
+            Assert.Equal(Convert.ToInt32("abc") + Convert.ToInt32("cdb"), result);
+        }
+
+        [Fact]
+        public void StringSumTestTwo(){
+            MathCalculator calculator = new MathCalculator();
+
+            var result = calculator.Sum("abcd", "efcdb");
+            Assert.Equal(Convert.ToInt32("abcd") + Convert.ToInt32("efcdb"), result);
+        }
     }
 }
