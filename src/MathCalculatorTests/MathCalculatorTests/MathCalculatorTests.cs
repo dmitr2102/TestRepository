@@ -28,7 +28,7 @@ namespace MathCalculatorTests
         }
 
         [Fact]
-        public void WhenSubThreeFromFiveThenGotTwo()
+        public void WhenSubFiveFromFourThenGotTwo()
         {
             MathCalculator calculator = new MathCalculator();
 
@@ -38,7 +38,7 @@ namespace MathCalculatorTests
         }
 
         [Fact]
-        public void WhenSubFourFromFiveThenGotTwo()
+        public void WhenSubFiveFromFourThenGotOne()
         {
             MathCalculator calculator = new MathCalculator();
 
