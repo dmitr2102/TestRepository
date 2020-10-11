@@ -2,7 +2,11 @@ namespace MathCalculatorTests
 {
     public class MathCalculator
     {
-        public int Sum(string a, string b)
+        public int SumS(string a, string b)
+        {
+            return(Int(a) + Int(b));
+        }
+        public int SumI(string a, string b)
         {
             return(Int(a) + Int(b));
         }
