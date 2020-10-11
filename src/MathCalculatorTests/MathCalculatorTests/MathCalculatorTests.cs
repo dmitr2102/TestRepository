@@ -8,6 +8,7 @@ namespace MathCalculatorTests
         //Arrange
         private const int Five = 5;
         const int Three = 3;
+        const int Four = 4;
         [Fact]
         public void WhenSumFiveAndThreeThenGotEight()
         {
@@ -34,6 +35,16 @@ namespace MathCalculatorTests
             var result = calculator.Sub(5, 3);
 
             Assert.Equal(Five - Three, result);
+        }
+
+        [Fact]
+        public void WhenSubFourFromFiveThenGotTwo()
+        {
+            MathCalculator calculator = new MathCalculator();
+
+            var result = calculator.Sub(4, 5);
+
+            Assert.Equal(Four - Five, result);
         }
     }
 }
