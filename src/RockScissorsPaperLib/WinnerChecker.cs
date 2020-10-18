@@ -6,11 +6,11 @@ namespace RockScissorsPaperLib
 {
     public class WinnerChecker
     {
-        public string Game(string s, int n)
+        string Game(string s)
         {
             Random rnd = new Random();
             //0 - бумага, 1 - ножницы, 2 - камень
-            // var n = rnd.Next(0, 3);
+            var n = rnd.Next(0, 3);
             if (s == "rock"){
                 if (n == 0)
                 {
@@ -53,7 +53,11 @@ namespace RockScissorsPaperLib
                 }
                 else return "You lose";
             }
-            else return "Error";
+
+            else {
+                return "Error.";
+            }
+            // NEWLINE
         }
     }
 }
