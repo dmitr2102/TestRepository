@@ -39,8 +39,24 @@ namespace RockScissorsPaperTests
         [Fact]
         public void Paper1()
         {
+            var res = checker.Game(paper, 0);
+            Assert.Equal("Draw", res);
+        }
+
+        [Fact]
+        public void Paper2()
+        {
             var res = checker.Game(paper, 1);
             Assert.Equal("You lose", res);
         }
+
+        [Fact]
+        public void Paper3()
+        {
+            var res = checker.Game(paper, 2);
+            Assert.Equal("You win", res);
+        }
+
+
     }
 }
