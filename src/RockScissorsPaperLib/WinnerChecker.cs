@@ -40,6 +40,7 @@ namespace RockScissorsPaperLib
                 }
                 else return "You lose";
             }
+            // NEWLINE
         }
     }
 }
