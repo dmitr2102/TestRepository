@@ -6,10 +6,14 @@ namespace RockScissorsPaperTests
 {
     public class WinnerCheckerTest
     {
+        private WinnerChecker checker = new WinnerChecker();
+        // Random rnd = new Random();
+        const string rock = "rock";
         [Fact]
-        public void Test1()
+        public void Rock1()
         {
-            WinnerChecker checker = new WinnerChecker();
+            var res = checker.Game(rock, 0);
+            Assert.Equal(res, "You win");
         }
     }
 }
