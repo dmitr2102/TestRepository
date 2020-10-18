@@ -9,7 +9,7 @@ namespace RockScissorsPaperLib
         string Game(string s)
         {
             Random rnd = new Random();
-            //1 - бумага, 2 - ножницы, 3 - камень
+            //0 - бумага, 1 - ножницы, 2 - камень
             var n = rnd.Next(0, 3);
             if (s == "rock"){
                 if (n == 0)
@@ -35,6 +35,19 @@ namespace RockScissorsPaperLib
                     return "You win";
                 }
                 else if (n == 1)
+                {
+                    return "Draw";
+                }
+                else return "You lose";
+            }
+
+            else if (s == "paper")
+            {
+                if (n == 2)
+                {
+                    return "You win";
+                }
+                else if (n == 0)
                 {
                     return "Draw";
                 }
