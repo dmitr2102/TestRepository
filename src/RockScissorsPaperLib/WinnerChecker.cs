@@ -6,7 +6,7 @@ namespace RockScissorsPaperLib
 {
     public class WinnerChecker
     {
-        string Game(string s)
+        public string Game(string s)
         {
             Random rnd = new Random();
             //0 - бумага, 1 - ножницы, 2 - камень
@@ -54,10 +54,7 @@ namespace RockScissorsPaperLib
                 else return "You lose";
             }
 
-            else {
-                return "Error.";
-            }
-            // NEWLINE
+            else return "Error";
         }
     }
 }
