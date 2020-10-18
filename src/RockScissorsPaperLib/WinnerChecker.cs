@@ -1,26 +1,44 @@
 ﻿using System.Security.Cryptography;
 using System;
-using RandomNumberGenerator;
+// using RandomNumberGenerator;
 
 namespace RockScissorsPaperLib
 {
     public class WinnerChecker
     {
-        string Game(string obj)
+        string Game(string s)
         {
             Random rnd = new Random();
             //1 - бумага, 2 - ножницы, 3 - камень
-            var n = rnd.Next(1, 4);
-            if (obj == "камень"){
-                if (n == 1){
+            var n = rnd.Next(0, 3);
+            if (s == "rock"){
+                if (n == 0)
+                {
                     return "You lose";
                 }
-                else if (n == 2){
+
+                else if (n == 1)
+                {
                     return "You win";
                 }
-                else{
+
+                else
+                {
                     return "Draw";
                 }
+            }
+
+            else if (s == "scissors")
+            {
+                if (n == 0)
+                {
+                    return "You win";
+                }
+                else if (n == 1)
+                {
+                    return "Draw";
+                }
+                else return "You lose";
             }
         }
     }
