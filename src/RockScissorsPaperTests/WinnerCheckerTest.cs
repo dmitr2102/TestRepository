@@ -32,8 +32,6 @@ namespace RockScissorsPaperTests
             Assert.Equal("Draw", res);
         }
 
-
-
         [Fact]
         public void Paper1()
         {
