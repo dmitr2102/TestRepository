@@ -9,25 +9,62 @@ namespace RockScissorsPaperLib
         public string Game(int p, int n)
         {
             //0 - бумага, 1 - ножницы, 2 - камень
-            switch (p, n){
-                case (0, 0): 
-                case (1, 1):
-                case (2, 2):
-                    return "Draw";
-                    break;
-                case (0, 1):
-                case (1, 2):
-                case (2, 0):
-                    return "You lose";
-                    break;
-                case (0, 2):
-                case (1, 0):
-                case (2, 1):
-                    return "You win";
-                    break;
+            switch (p)
+            {
+                case (0): 
+                    switch(n)
+                    {
+                        case(0):
+                            return "Draw";
+                        break;
+                        case(1):
+                            return "You lose";
+                        break;
+                        case(2):
+                            return "You win";
+                        break;
+                        default:
+                            return "Error";
+                        break;
+                    }
+                break;
+                case (1): 
+                    switch(n)
+                    {
+                        case(0):
+                            return "You win";
+                        break;
+                        case(1):
+                            return "Draw";
+                        break;
+                        case(2):
+                            return "You lose";
+                        break;
+                        default:
+                            return "Error";
+                        break;
+                    }
+                break;
+                case (2): 
+                    switch(n)
+                    {
+                        case(0):
+                            return "You lose";
+                        break;
+                        case(1):
+                            return "You win";
+                        break;
+                        case(2):
+                            return "Draw";
+                        break;
+                        default:
+                            return "Error";
+                        break;
+                    }
+                break;
                 default:
-                    return "Error";
-                    break;
+                    return("Error");
+                break;
             }
 
             /*if (s == "rock"){
